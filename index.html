@@ -1,62 +1,18 @@
 <html>
     <head>
-       <link rel="stylesheet" href="style.css">
+       <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+
         <div id="threeSixtyZoom">
-            <div id="threesixty" style="z-index: 0; position: absolute;"></div>
-            <img class='zoom' src='0.png' alt='Daisy!' width='328' height='328' id="zoomImage" style="z-index: 1; position: absolute;"/>
+            <div id="threesixty" class="threeSixty"></div>
+            <img class='zoom' src='images/0.png' alt='Daisy!' width='328' height='328' id="zoomImage"/>
         </div>
+
         <script>var isZoomed = false;</script>
-        <script src="threesixty.js"></script>
-        <script src="zoom.js"></script>
-        <script>
-            var threesixty = new ThreeSixty(document.getElementById('threeSixtyZoom'), {
-                image: 'img1.jpg',
-                count: 24,
-                perRow: 8,
-                width: 328,
-                height: 328,
-                // prev: document.getElementById('prev'),
-                // next: document.getElementById('next')
-            }, document.getElementById('threesixty'));
-            wheelzoom(document.querySelector('img.zoom'));
-            function next() {
-                threesixty.next();
-            }
-            function back() {
-                threesixty.prev();
-            }
-            function up() {
-                threesixty.up(1);
-            }
-            function down() {
-                threesixty.down(1);
-            }
-
-            document.getElementById('threeSixtyZoom').addEventListener('mousedown', function(){
-                if(!isZoomed) {
-
-                    console.log('zoom changed');
-                    document.getElementById('zoomImage').style.zIndex="0";
-                    document.getElementById('zoomImage').style.display="none";
-
-                    document.getElementById('threesixty').style.zIndex="1";
-                    document.getElementById('threesixty').style.display="block";
-
-                }
-            })
-
-            document.addEventListener('mouseup', function () {
-
-                document.getElementById('zoomImage').style.zIndex = "1";
-                document.getElementById('zoomImage').style.display = "block";
-
-                document.getElementById('threesixty').style.zIndex = "0";
-                document.getElementById('threesixty').style.display = "none";
-
-            })
-        </script>
+        <script src="js/threesixty.js"></script>
+        <script src="js/zoom.js"></script>
+        <script src="js/scroom.js"></script>
 </body>
 
 </html>
