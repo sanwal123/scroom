@@ -1,0 +1,32 @@
+.imageBox {
+    width: 300px;
+    height: 300px;
+    border: solid 1px black;
+    float: left;
+}
+.button {
+    height: 100px;
+    width: 100px;
+    float: left;
+    margin: 5px;
+    border: solid 1px red;
+}
+.parent{
+    width: 300px;
+    min-height: 410px;
+    border: solid 1px yellow;
+    padding: 5px;
+}
+.image {
+    max-width: 300px;
+    max-height: 300px;
+    display: block;
+}
+.threeSixty {
+    z-index: 0;
+    position: absolute;
+}
+.zoomImage {
+    z-index: 1;
+    position: absolute;
+}
